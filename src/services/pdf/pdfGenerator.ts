@@ -28,7 +28,8 @@ const COLORS = {
   promarkBlue: [0, 82, 155] as [number, number, number], // Promark blue
   footerBlue: [0, 68, 130] as [number, number, number], // Footer blue bar
   headerText: [80, 80, 80] as [number, number, number],
-  tableHeader: [217, 217, 217] as [number, number, number], // Light gray
+  tableHeader: [0, 82, 155] as [number, number, number], // Promark blue for table header
+  tableHeaderText: [255, 255, 255] as [number, number, number], // White text for header
   text: [0, 0, 0] as [number, number, number],
   border: [0, 0, 0] as [number, number, number],
 };
@@ -265,7 +266,7 @@ function addBoqTable(doc: jsPDF, items: BoqData['items'], startY: number): numbe
     
     headStyles: {
       fillColor: COLORS.tableHeader,
-      textColor: COLORS.text,
+      textColor: COLORS.tableHeaderText,
       fontSize: 8,
       fontStyle: 'bold',
       halign: 'center',
