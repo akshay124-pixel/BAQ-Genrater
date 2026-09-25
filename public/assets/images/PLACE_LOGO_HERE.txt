@@ -1,0 +1,19 @@
+================================================================================
+IMPORTANT: PROMARK LOGO REQUIRED
+================================================================================
+
+Please save the Promark logo image in this directory as:
+
+    promark-logo.png
+
+The logo should be the official Promark wordmark featuring:
+- Blue "promark" text
+- Registered trademark symbol (®)  
+- "MARK OF PROFICIENCY" tagline
+
+Expected path:
+    public/assets/images/promark-logo.png
+
+This logo will be automatically loaded and embedded in all generated PDF quotations.
+
+================================================================================
