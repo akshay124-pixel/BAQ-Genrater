@@ -96,7 +96,7 @@ export const ProductSelector: React.FC<ProductSelectorProps> = ({
         ) : (
           <input
             type="text"
-            placeholder="Search products..."
+            placeholder="Search products or type to add custom..."
             value={searchTerm}
             onChange={(e) => {
               setSearchTerm(e.target.value);
@@ -144,8 +144,33 @@ export const ProductSelector: React.FC<ProductSelectorProps> = ({
                   ))}
                 </ul>
               ) : (
-                <div className="px-4 py-8 text-center text-sm text-gray-500">
-                  No products found matching "{searchTerm}"
+                <div className="px-4 py-6 text-center">
+                  <p className="text-sm text-gray-500 mb-3">
+                    No products found matching "{searchTerm}"
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      onChange({
+                        id: 'custom-' + Date.now(),
+                        name: searchTerm,
+                        description: '',
+                        defaultUnit: 'Nos',
+                        defaultRate: 0,
+                        gstPercentage: 18,
+                        category: 'Custom Product',
+                        active: true,
+                      });
+                      setIsOpen(false);
+                      setSearchTerm('');
+                    }}
+                    className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+                  >
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                    </svg>
+                    Add "{searchTerm}" as Custom Product
+                  </button>
                 </div>
               )}
             </div>
