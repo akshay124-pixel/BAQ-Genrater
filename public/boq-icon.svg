@@ -1,0 +1,115 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64 64"
+  fill="none"
+>
+  <defs>
+    <linearGradient id="bg" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+
+    <linearGradient id="paper" x1="18" y1="12" x2="48" y2="54" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E2E8F0"/>
+    </linearGradient>
+
+    <linearGradient id="accent" x1="21" y1="20" x2="45" y2="47" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+
+    <filter id="shadow" x="8" y="7" width="48" height="52" filterUnits="userSpaceOnUse">
+      <feDropShadow
+        dx="0"
+        dy="3"
+        stdDeviation="2.5"
+        flood-opacity="0.3"
+      />
+    </filter>
+  </defs>
+
+  <!-- Premium rounded background -->
+  <rect
+    width="64"
+    height="64"
+    rx="15"
+    fill="url(#bg)"
+  />
+
+  <!-- Subtle highlight -->
+  <path
+    d="M14 11C23 5 39 5 50 13"
+    stroke="#60A5FA"
+    stroke-width="2"
+    stroke-linecap="round"
+    opacity=".35"
+  />
+
+  <!-- BOQ document -->
+  <g filter="url(#shadow)">
+    <path
+      d="M17 12C17 9.8 18.8 8 21 8H39L49 18V52C49 54.2 47.2 56 45 56H21C18.8 56 17 54.2 17 52V12Z"
+      fill="url(#paper)"
+    />
+
+    <!-- Document fold -->
+    <path
+      d="M39 8V18H49"
+      fill="#CBD5E1"
+    />
+
+    <path
+      d="M39 8L49 18H39V8Z"
+      fill="#94A3B8"
+    />
+  </g>
+
+  <!-- BOQ title -->
+  <text
+    x="22"
+    y="27"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="7"
+    font-weight="800"
+    fill="#0F172A"
+  >
+    BOQ
+  </text>
+
+  <!-- Table header -->
+  <rect
+    x="22"
+    y="31"
+    width="22"
+    height="4"
+    rx="1"
+    fill="url(#accent)"
+  />
+
+  <!-- Table rows -->
+  <rect x="22" y="38" width="4" height="4" rx="1" fill="#2563EB"/>
+  <rect x="28" y="38.5" width="14" height="2.5" rx="1.25" fill="#94A3B8"/>
+
+  <rect x="22" y="44" width="4" height="4" rx="1" fill="#2563EB"/>
+  <rect x="28" y="44.5" width="14" height="2.5" rx="1.25" fill="#94A3B8"/>
+
+  <!-- Total / calculation badge -->
+  <circle
+    cx="44"
+    cy="48"
+    r="8"
+    fill="#0F172A"
+    stroke="#22D3EE"
+    stroke-width="2"
+  />
+
+  <!-- Check -->
+  <path
+    d="M40.5 48L43 50.5L47.5 45.5"
+    stroke="#22D3EE"
+    stroke-width="2.2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

@@ -214,7 +214,6 @@ export const ProductBuilderForm: React.FC<ProductBuilderFormProps> = ({
             value={formData.unitRate || ''}
             onChange={handleChange('unitRate')}
             error={errors.unitRate}
-            helperText="You can override the default rate"
             required
           />
           <Select
